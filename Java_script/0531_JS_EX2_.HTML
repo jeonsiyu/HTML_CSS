@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script>
+    // 1. 2개의 숫자를 입력 받아서 첫번째 숫자는 시작, 두번쩨 숫자는 마지막을 나타냄
+    //     시작부터 끝까지의 합과 평균 구하기
+    //     조건) 입력받은 2번째 숫자보다 작거나 같으면 다시 입력받기.
+
+    const number1= Number(prompt('첫번째 숫자', '>>숫자 입력<<'));
+    let number2;
+
+    do{
+        number2= Number(prompt('두번째 숫자(첫번째 숫자보다 큰 수 입력)', '>>숫자 입력<<'));
+    } while (number2 <= number1);
+
+    let total = 0   
+    let count = 0 
+
+    for (let i=number1; i<=number2; i++) {
+        total += i
+        count ++
+    }
+    
+    document.write(`<h2>첫번째 숫자부터 두번째 숫자까지의 합 : ${total}</h2><br />`);
+
+    let ave = total/count
+    document.write(`<h2>첫번째 숫자부터 두번째 숫자까지의 평균 :${ave}</h2>`);
+
+    // 2. 1~100까지의 숫자중에 배수만 출력하기.
+
+    const number3= Number(prompt('원하는 배수 출력', '>>숫자 입력<<'));
+    for (let i= 0; i<=100; i++) {
+        if (i % number3 === 0  )
+                console.log(i)
+    } 
+    
+    // 3. 구구단 전체 출력
+    /* 2X1= 3X1=3 4X1=4 
+       .................
+       .................
+       ........ 9x9=81
+    */
+
+    for(let i = 2; i<=9; i++) {
+        console.log(`<h2>\n${i}단</h2>`);
+        for(let j=1; j<=9; j++ ) {
+        console.log(`<h2>${i}x${j}=${i*j}</h2>`);
+        } 
+    }
+
+
+    // 4. 아래의 형태 출력
+    /*
+    
+    
+    */
+</script>
+</head>
+<body>
+    
+</body>
+</html>
