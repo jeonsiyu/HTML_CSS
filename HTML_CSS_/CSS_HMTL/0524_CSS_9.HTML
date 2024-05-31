@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>position-absolute</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      /* static 을 제외한 속성을 부모, body, html으로 상속 */
+      #absolute {
+        background: aqua;
+        position: absolute;
+        bottom: 100px;
+        right: 100px;
+      }
+      #parent {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background: yellow;
+      }
+      #child {
+        background: greenyellow;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="absolute">Absolute</div>
+    <div id="parent">
+      <div id="child">Child</div>
+    </div>
+  </body>
+</html>

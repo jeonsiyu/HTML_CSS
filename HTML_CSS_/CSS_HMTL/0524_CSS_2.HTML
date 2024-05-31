@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+/* 
+    px : pixel단위 
+    em : font-size를 기준으로 px로 변경
+        (해당 요소에 폰트 사이즈가 없으면 상위(부모)쪽의 요소 기준)
+    rem : root 요소에서 지정된 폰트 크기를 기준으로 px 변경
+        (폰트 크기가 없으면 16px)
+    &: 모니터 해상도를 기준으로
+    
+    margin-top: 10px;
+    margin-bottm: 10px;
+    [축약 표시]
+    1.네면 모두 적용
+    margin: 1em;
+    
+    2. top-bottom, left-right
+    margin: 5% auto;
+    
+    3. top, left-right, bottom
+    margin: 1em auto 2em
+
+    4. top, right, bottom, left
+    margin: 1px 2px 3px 4px
+
+    5. 전역값
+    margin: inherit --> 부모 요소의 마진값 속성을 상속
+    margin: initial --> 초기화
+    margin: unset; --> 마진 제거
+*/
+ div{
+    display: block;
+    width: 100px;
+    height: 100px;
+ }
+ #box1{
+    background-color: yellow;
+ }
+ #box1{
+    background-color: greenyellow;
+    margin-top: 10px
+ }
+</style>
+</head>
+<body>
+    <div id="box1">박스 1</div>
+    <div id="box1">박스 2</div>
+</body>
+</html>

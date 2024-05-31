@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>비교연산자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+ 
+    <script>
+        // 비교(관계) 연산자 (중요!!)
+        // 결과값이 true(참), false(거짓)
+        // 제어문에서 많이 사용 (중요)
+        let n1 = 3;
+        
+        // 같은가? (타입 무시) 앞에 들어간 값 자체를 비교하는 것 모두 true(참)
+        document.write(`<h2>n1==3 : ${n1==3}</h2>`);
+        document.write(`<h2>n1=="3" : ${n1=="3"}</h2>`);
+        document.write('<hr>');
+
+        // 같은가? (동일한 타입만 비교)
+        document.write(`<h2>n1===3 : ${n1===3}</h2>`);
+        document.write(`<h2>n1==="3" : ${n1==="3"}</h2>`);
+        document.write('<hr>');
+
+
+        // 다른가? (타입 무시)
+        document.write(`<h2>n1!=3 : ${n1!=3}</h2>`);
+        document.write(`<h2>n1!="3" : ${n1!="3"}</h2>`);
+        document.write('<hr>');
+
+        // 다른가? (동일한 타입만 비교)
+        document.write(`<h2>n1!==3 : ${n1!==3}</h2>`);
+        document.write(`<h2>n1!=="3" : ${n1!=="3"}</h2>`);
+        document.write('<hr>');
+        
+        // >, <, >=, <=
+        document.write(`<h2>n1 > 3:${n1 > 3}</h2>`);
+
+        // 텍스트3을 숫자 3으로 변환하여 비교
+        document.write(`<h2>n1 >= "3":${n1 >= "3"}</h2>`);
+        document.write('<hr>');
+
+        // 문자열 연결 연산자
+        let str1 = "안녕";
+        let str2 = "하세요";
+        document.write(`<h2>str1 + str2 : ${str1+str2}</h2>`);
+        
+        // 문자 + 숫자 = 문자로 자동 변환
+        document.write(`<h2>str1 + 1000 : ${str1+1000}</h2>`);   
+
+        // 일반적인 프로그래밍 언어에서는 문자, 문자열을 구분함.
+        // "abc" - 문자열, 'a' - 문자 ==> c, java, c#, c++
+        // 자바스크립트에서는 문자, 문자열 구분이 없음 (동일하게 취급) 
+        // "a", 'abc' - 텍스트 ==> 자바스크립트 python
+
+        // 3항 연산자 - 제어문에서 if-else와 동일
+        const age = Number(prompt('나이 입력'));
+        let chk = age > 18 ? '성인' : '미성년자';
+        document.write(`<h2>나이가 ${age}살 이므로 ${chk}</h2>`);
+        document.write('<hr>');
+
+        // typeof : 객체 속성
+        document.write(`<h2>typeof 100: ${typeof 100}<h2>`);
+        document.write(`<h2>typeof '홍길동' : ${typeof '홍길동'}<h2>`);
+        // 자바스크립트 객체 (JSON)    
+        document.write(`<h2>typeof {'a':100}: ${typeof {'a' :100}}<h2>`);
+
+        // in, of 연산자 - 배열, 반복문은 뒤에 나옴
+        const fruits = ["apple", "banana", "orange"]; // 배열
+        for(item in fruits) {  
+            document.write(`<h2>${item}</h2>`); // 배열의 index를 출력
+        }    
+
+        for (item of fruits) {
+            document.write(`<h2>${item}</h2>`); // 배열의 요소(값)를 출력
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

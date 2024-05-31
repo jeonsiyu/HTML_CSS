@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script>
+    // 논리 연산자
+    // 제어문에서 가장 많이 사용하는 연산자(비교, 논리)
+    
+    // and 논리 연산자 - 한쪽이 false이면 결과는 false
+    let a1 = true && true;
+    document.write(`<h2>true && true : ${a1}</h2>`);
+    let a2 = true && false;
+    document.write(`<h2>true && false : ${a2}</h2>`);
+    let a3 = false && true;
+    document.write(`<h2>false && true : ${a3}</h2>`);
+    let a4 = false && 3 == 4;
+    document.write(`<h2>false && (3 == 4) : ${a4}</h2>`);
+    let a5 = 4 < 3 && 2 < 4;
+    document.write(`<h2> 4 < 3 && 2 < 4 : ${a5}</h2>`);
+
+    
+    // or 논리 연산자 - 한쪽이 true이면 결과는 true
+    let a6 = false || true;
+    document.write(`<h2>false || true : ${a5}</h2>`);
+    let a7 = 1 > 4 || 2 < 4
+    document.write(`<h2>1 > 4 || 2 < 4 : ${a7}</h2>`);
+
+    // 문자열 비교: 알파벳, 가나다 순으로 뒤쪽이 크다
+    let a8 = " 홍길동" > "전우치";
+    document.write(`<h2>"홍길동" > "전우치" : ${a8}<h/2>`);
+    
+    // 부정연산자
+    let a9 = !true; // true를 부정하여 false로 변환
+    document.write(`<h2>!true : ${a9}</h2>`)
+
+    // 연산자 우선 순위
+    // () -> 사칙연산자(*,/ > +,-) -> 비교(관계)연산자 -> 논리연산자
+    // 일반계산기 : 1 +2 * 3 = 9
+    // 공학용(프로그래밍언어) 계산기: 1 + 2 * 3 = 7
+    document.write(`<h2> 1 + 2 * 3 : &{1 + 2 * 3}</h2>`);
+
+
+
+
+    
+
+</script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

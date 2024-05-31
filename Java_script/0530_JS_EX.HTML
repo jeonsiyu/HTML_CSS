@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script>
+    /* // 1. 금액이 1200원이면, 500원 동전의 개수, 거스름돈 구하기.
+    let money = 1200;
+    let count1= Math.floor(money/500); // 실수 -> 정수 변환하는 함수
+    document.write(`<h2>500원 동전의 개수 : ${count1}</h2>`)
+    document.write(`<h2>나머지 : ${money%500}</h2>`)
+
+    // 2. 금액이 1350원이면 500원, 100원 동전개수, 거스름돈 구하기
+    let money2 = 1350;
+    let count2= Math.floor(money2/500); // 실수 -> 정수 변환
+    let rest = money2 % 500
+    let count3= Math.floor(rest/100); // 변수값을 출력해서 확인(디버깅)
+    document.write(`<h2>500원 동전의 개수 : ${count2}</h2>`);
+    document.write(`<h2>100원 동전의 개수 : ${count3}</h2>`);
+    */
+
+    // 3. 금액이 2363원이면 500원, 100원 50원 10원 동전 개수, 최종 거스름돈 구하기
+    /*  let money = 2363;
+    let count1 = parseInt(money%500);
+    let count2 = parseInt(count1%100);
+    let count3 = parseInt(count1%50);
+    document.write(`<h2>500원 동전의 개수 : ${money/500}</h2>`);
+    document.write(`<h2>100원 동전의 개수 : ${count1/100}</h2>`);
+    document.write(`<h2>50원 동전의 개수 : ${count2/50}</h2>`);
+    document.write(`<h2>100원 동전의 개수 : ${count3/10}</h2>`); 
+    */
+    
+    /*
+    let money = 2363;
+        let n500 = Math.floor(money/500);
+        let r500 = money % 500;
+        document.write(`<h2>500원 개수:${n500}</h2>`);
+        
+        let n100 = Math.floor(r500/100);
+        let r100 = r500 % 100;
+        document.write(`<h2>100원 개수:${n100}</h2>`);
+
+        let n50 = Math.floor(r100/50);
+        let r50 = r100 % 50;
+        document.write(`<h2>50원 개수:${n50}</h2>`);
+
+        let n10 = Math.floor(r50/10);
+        let r10 = r50 % 10;
+        document.write(`<h2>10원 개수:${n10}</h2>`);
+        document.write(`<h2>최종 거스름돈:${r10}</h2>`);
+        */
+
+        // 위의 내용을 간결하게 처리
+        let money = 2363;
+        let n500 = Math.floor(money/500);
+        document.write(`<h2>500원 개수:${n500}</h2>`);
+        
+        let n100 = Math.floor((money % 500)/100);
+        document.write(`<h2>100원 개수:${n100}</h2>`);
+
+        let n50 = Math.floor((money % 100)/50);
+        document.write(`<h2>50원 개수:${n50}</h2>`);
+
+        let n10 = Math.floor((money % 50)/10);
+        document.write(`<h2>10원 개수:${n10}</h2>`);
+        document.write(`<h2>최종 거스름돈:${money % 10}</h2>`);
+
+// 1. 위의 프로그램에서 금액을 직접 입력 받아서 처리하기
+// 2. 이름, 나이, 생년 월일, 주소, 이메일, 취미를 입력 받아 출력
+// 3. 반지름을 입력 받아 우너의 면적 구하기( 면적=반지름 *반지름 *3.14)
+// 4. 국어, 영어, 수학, 점수를 입력 받아 총점, 평균을 구하기.
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

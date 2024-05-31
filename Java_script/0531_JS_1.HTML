@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>제어문</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script>
+    // 제어문 : if, swithc
+    const date = new Date();        // Date 객체 생성
+    const hour = date.getHours();   // 현재 시간
+    console.log(`현재시간:${hour}`);
+    console.log(`현재시간:${date}`);
+
+    if (hour < 12) {
+        alert('오전');
+    }
+    else {
+        alert('오후');
+    }
+    if (hour < 10) {
+        alert('아침 식사 시간');   
+    }
+    else if (hour < 14) {
+        alert('점심 식사 시간');
+    }
+    else {
+        alert('저녁 식사 시간');
+    }
+    
+    // prompt('타이틀','기본 입력값');
+    const score = Number(prompt('학점을 입력하세요','>>학점 입력<<'))
+    if (score === 4.5) {
+        alert ('신');
+    }
+    else if (score >= 4.2 && score < 4.5){
+        alert('교수님의 사랑');
+    }
+    else if (score >= 3.5 && score < 4.2){
+        alert('현 체제의 수호자');
+    } 
+    else if (score >= 2.8 && score < 3.5){
+        alert('일반인');
+    } 
+    else if (score >= 2.3 && score < 2.8){
+        alert('일탈을 꿈꾸는 소시민');
+    } 
+    else if (score >= 1.75 && score < 2.3){
+        alert('오락문화의 선구자');
+    }
+    else if (score >= 1.0 && score < 1.75){
+        alert('불가촉천민');
+    }
+    else if (score >= 0.5 && score < 1.0){
+        alert('자벌레');
+    }
+    else if (score >= 0 && score < 0.5){
+        alert('플랑크톤');
+    }
+    else {
+        alert('시대를 앞서가는 혁명의 씨앗');
+    }
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

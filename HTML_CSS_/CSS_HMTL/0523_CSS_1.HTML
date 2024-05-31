@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>일반속성선택자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+ <style>
+    /* input 태그 자체는 사용자에게 정보를 입력받는 기능을 수행하는 태그 */
+    /* input 태그는 속성 값에 따라 형태가 달라질수 있음*/
+    /* 선택자[속성="속성값"]{스타일속성: 스타일값;} */
+    /* 해당 속성을 가진 태그만 선택되어 적용 */
+    input[type="text"]{ 
+        background: red;
+    }
+    input[type="password"]{ 
+        background:blue;
+    }
+ </style>
+</head>
+<body>
+    <form>
+        <input type="text"/>
+        <input type="password" />
+    </form>
+    
+</body>
+</html>

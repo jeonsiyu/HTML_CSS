@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>연산자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    // 복합 연산자 : +=(A=A+B), -=,*=, /=, %=
+    let list = '';
+    list += '<ul>';  
+    list += '<li>안녕하세요</li>';
+    list += '<li>자바스크립트</li>';
+    list += '</ul>';
+    document.write(list);
+
+    // 사칙연산자 +, -, *, /, %(나머지)
+    let a = 3;
+    console.log(`a % 2 : ${a%2}`);
+    console.log(`a % 0 : ${a%0}`); // Nan (Not a number) 에러
+
+    // 자바스크립트는 모든 정보들을 객체로 인식
+    let n = (100).toString();
+
+    // undefined : 변수에 값이 설정되지 않은 상태
+    let b; 
+    console.log(`b : ${b}`);
+
+    //null : 변수에 값이 비어있는 상태
+    let c = null;
+    console.log(`c : ${c}`);
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

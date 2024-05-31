@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>자바스크립트 화면입출력</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        /* 여러줄 주석 */
+        // 변수 선언 : 일반적인 자바스크립에서는 타입이 없음 ->  주로 let 사용 옛날방식은 var 사용
+        // '' 문자와 문자열 구분 없이 사용가능-> 텍스트나 넘버냐의 구분만 하는거지 문자와 문자열 구분은 상관 x
+        let list = ''; // ; 생략가능
+        list += '<ul>';  // list = list + '<ul>'
+        list += '<li><h1>안녕하세요</h1></li>';
+        list += '<li>반갑습니다</li>';
+        list += '</ul>';
+        // list 변수 안에 들어있는 정보를 브라우저에 출력
+        document.write(list);
+
+        let num = 10
+        alert(num); // 팝업창 띄우기 -> 알럿창이 먼저 뜸
+
+        // console.log 출력
+        let n1 = 1;         // 정수
+        let str = '문자열'; // 문자(열)
+        let f1 = 10.2       // 실수
+        let bool = true     // boolean
+        console.log('문자열:' +str);
+        console.log(`실수 : ${f1}`); // 백티 (~밑에 있는 특수문자)
+
+        //입력처리
+        const input = prompt('이름을 입력하세요');
+        document.write('<h1>' + input +'</h1>'); // ''을 사용해서 입력
+        document.write(`<h1> ${input}</h1>`); // ``을 사용해서 입력
+
+        const num1 = prompt ('1.숫자를 입력하세요');
+        document.write(`<h1>문자열 결합${num1 + 100}</h1>`); // 입력받은 값은 기본적으로 문자열로 인식함 --> 숫자로 바꿔줘야함
+        document.write(`<h1>숫자 변환:${Number(num1) + 100}</h1>`); // 숫자로 바꿔줌
+        document.write(`<h1>문자열 변환:${(100).toString()}</h1>`); 
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

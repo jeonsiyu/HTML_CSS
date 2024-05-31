@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>.클래스선택자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+/* 만약 클래스 속성이 서로 다른 태그에 사용될 경우 태그 선택자와 클라스 선택자를 함께 사용 하면 더욱 정확한 태그를 선택할 수 있음*/
+/* li태그의 클래스에 적용하는 스타일블록 */
+    li.select{
+            color: red;
+    }
+    </style>
+</head>
+<body>
+    <h1 class="select">테스트 html css</h1>
+    <ul>
+        <li class="select">항복 1</li>
+        <li> 항복 2</li>
+        <li> 항복 3</li>
+        <li> 항복 4</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>후손선택자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+/* 후손선택자는 공백을 사용하여 자기 태그아래 중에 선택에 속하는 모든 것에 적용 */
+/* 자기 자신은 제외 시킴 */
+/* 진행방향은 아래로만 */
+
+    #header h1{
+        color:red;
+    }
+    #section h1{
+        color:aqua;
+    }
+</style>
+
+</head>
+<body>
+    <div id="header">
+        <h1 class="title">텍스트 제목1</h1>
+        <div di = "nav">
+            <h1>네비게이션</h1>
+        </div>
+    </div>
+    <div id="section">
+        <h1 class="title">텍스트 제목2</h1>
+        <p>안녕하세요</p>
+    </div>
+</body>
+</html>

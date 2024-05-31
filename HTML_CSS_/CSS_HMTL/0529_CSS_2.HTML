@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    html, body, #container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+    header {
+        height: 120px;
+        background-color: yellow;
+        text-align: center;
+    }
+    section {
+        flex-grow: 1;
+        overflow-y: auto; /* 컨텐츠가 넘치면 스크롤 자동생성 */
+    }
+    section img {
+        float :right;
+    }
+    /*
+    flex-direction: flex item - 정렬 방향(기본: 행)
+    justify-content: flex item - 수평 정렬
+    align-items: flex item - 수직 정렬
+    */
+    footer {
+        display: flex;
+        height: 100px;
+        background-color: blue;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <header>헤더 영역</header>
+        <section>
+            <a href="http://www.google.com"><img src="./imges/고양이.jpg"></a>
+            <p>안녕하세요</p>
+            <p>반갑습니다</p>
+            <p>감사합니다</p>
+            <p>안녕히가세요</p>
+        </section>
+        <footer>하단 영역</footer>
+    </div>
+    
+</body>
+</html>

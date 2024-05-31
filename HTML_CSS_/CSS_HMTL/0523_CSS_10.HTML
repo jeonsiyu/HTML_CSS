@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        div p:first-child { /* 지금 첫번째 자식은 <div>이므로 적용되지 않은 것 */
+            color: red;
+        }
+        div p:first-of-type { /* p태그 중에서 첫번째를 기준으로 하는것*/
+            color: blue;
+        }
+        </style>
+</head>
+<body>
+    <div>
+    <div>테스트 1</div>
+    <p>테스트 2</p>
+    <p>테스트 3</p>
+    </div>
+</body>
+</html>

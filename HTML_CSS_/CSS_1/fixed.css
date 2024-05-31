@@ -1,0 +1,24 @@
+/*position fixed css */
+#box1 {
+    width: 500px;
+    height: 200px;
+    background-color:  gray;
+}
+
+#fixed_parent {
+    width: 500px;
+    height: 500px;
+    background-color: yellow;
+}
+#fixed_child {
+    position: fixed; 
+    width: 200px;
+    height: 200px;
+    background-color:  blue;
+}
+
+#box2 {
+    width: 500px;
+    height: 2000px;
+    background-color: plum;
+}

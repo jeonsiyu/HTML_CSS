@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>형제선택자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+    /* 인접한 형제 */
+    /* 자기자신은 적용 x 자기와 가장 인접한 형제에 적용-> 바로 뒤쪽 형제에 영향을 줌 */
+   h1 + h2 { 
+    color: red;
+   } 
+   /* 일반형제 */
+   /* 자기자신은 적용x  자신가 동일한 레벨에 있는 모든 형제에 적용*/
+   h1 ~ h2{ 
+    background-color: yellowgreen;
+   }
+
+</style>
+</head>
+<body> <!-- h1원과 h2를 감싸는 태그가 없으므로 서로 동일한 레벨-->
+    <h1>테스트 1</h1>
+    <h2>테스트 2</h2>
+    <h2>테스트 3</h2>
+    <h2>테스트 4</h2>
+    <h2>테스트 5</h2>
+
+</body>
+</html>

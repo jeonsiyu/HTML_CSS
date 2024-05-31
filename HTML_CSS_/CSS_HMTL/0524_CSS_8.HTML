@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>position-relative</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+    span, 
+    div {
+    background: yellow;
+    border: 1px solid black;
+    }
+    .spl{
+        position: relative; /* 상대적인 좌표이동*/
+        top: 5px;   
+        z-index: 1; 
+    }
+    .sp2{
+        position: relative;
+        top: 8px;
+        right: 10px ;
+        z-index: 2;
+
+    }
+    .sp3{
+        position: relative;
+        bottom: 5px;   
+    }
+    .di{
+        position: relative;
+        left: 5px ;  
+    }
+
+</style>
+</head>
+<body>
+    <span class = "sp1">span 항복1</span>
+    <span class = "sp2">span 항복1</span>
+    <span class = "sp3">span 항복1</span>
+    <div class = "di">div 항복</span>
+
+</body>
+</html>

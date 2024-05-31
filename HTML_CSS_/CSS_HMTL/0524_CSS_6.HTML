@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<style>
+    ul {
+        overflow: hidden;  /* 잘라낸다,숨긴다 */
+    }
+    li{
+        list-style: none;
+        float: left;
+        padding: 15px;
+    }
+    /* 가상 클래스 */
+    li:first-child {
+        border-radius: 50px 0 0 50px; /* 꼭지점의 각도 */
+    }
+    li:last-child {
+        border-radius:  0 50px 0 50px;
+    }
+    li:nth-chil(2n) { /* 2n: 짝수 순서 개념 */
+        background-color:  yellow; 
+    }
+    li:nth-chil(2n+1) { /* 2n+1: 홀수 순서 개념 */
+        background-color:  yellowgreen; 
+    }
+</style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>항목1</li>
+            <li>항목2</li>
+            <li>항목3</li>
+            <li>항목4</li>
+            <li>항목5</li>
+            <li>항목6</li>
+            <li>항목7</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
