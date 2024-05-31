@@ -52,6 +52,36 @@ else {
     document.write(`<h2>${year}년은 윤년이 아닙니다.</h2>`)
 }
 
+// 3. 국어, 영어, 수학 점수를 입력받아 총점, 평균, 학점 구하기.
+// - 100~90: A학점, 89~80: B학점, 79~70: C학점, 69~60: D학점, 59~0: F학점 
+
+const jub1 = Number(prompt('국어 점수를 입력하시오', '>>점수 입력<<'));
+const jub2 = Number(prompt('영어 점수를 입력하시오', '>>점수 입력<<'));
+const jub3 = Number(prompt('수학 점수를 입력하시오', '>>점수 입력<<'));
+let total = jub1+jub2+jub3
+let ave = total/3
+
+document.write(`총점은 ${total}점 입니다.`);
+document.write(`평균은 ${ave}점 입니다.`);
+
+if (ave <= 100 && ave >= 90){
+    document.write(`학점은 A입니다.`);
+}
+else if (ave <= 89 && ave >= 80){
+    document.write(`학점은 B입니다.`);
+}
+else if (ave <= 79 && ave >= 70){
+    document.write(`학점은 C입니다.`);
+}
+else if (ave <= 69 && ave >= 60){
+    document.write(`학점은 D입니다.`);
+} 
+else {
+    document.write(`학점은 F입니다.`);
+}
+
+document.write(`학점은 ${score}점 입니다.`);
+
 
 
 
