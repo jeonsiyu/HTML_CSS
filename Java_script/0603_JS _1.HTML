@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>배열</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    let arr1 = []; //-> 비어있는 1차원 배열 생성( 크기가 지정되지 않은 상태로 계속해서 확장해서 나갈 수 있음)
+    arr1[0] = '1';
+    arr1[1] = '2';
+    arr1[2] = '3';
+    for (let i=0; i<arr1.length; i++) {
+        document.write(arr1[i] + '&nbsp;'); // '&nbsp;' 공백을 나타내는 특수문자
+        }
+    document.write('<hr>')
+
+        // 비어있는 1차원 배열 객체 생성 (Array 클래스 사용)
+        let arr3 = new Array(); // 'new Array()' 구문은 새로운 배열 객체를 생성하기 위해 사용
+        arr3[0] = '1';
+        arr3[1] = '2';
+        arr3[2] = '3';
+        for (let i=0; i<arr3.length; i++) { // 배열 요소 개수 확인하기 : .length 속성을 사용 -> 배열이름.length속성
+            document.write(arr3[i] + '&nbsp;');
+        }
+        document.write('<hr>')
+
+        // 1차원 배열 초기값 할당
+        let arr2 = ['1', '2', '3'];
+        for (let i=0; i<arr2.length; i++) {
+            document.write(arr2[i] + '&nbsp;');
+        }
+        document.write('<hr>')
+
+        let arr4 = new Array(3); // 크기가 3인 배열
+        for (let i=0; i<arr4.length; i++) { 
+            arr4[i] = i+1;
+            document.write(arr4[i] + '&nbsp;');
+        }
+        document.write('<hr>')
+        
+        // Spread 연산자 -> ...
+        // 객체에 들어있는 값들을 풀어서 표현 -> 배열이 아닌 값으로 표현한것(요소 하나하나를 보여주는 느낌)
+        const arr5 = [1, 2, 3];
+        console.log(arr5);
+        console.log(...arr5);
+        // 스프레드 연산자 표현을 정확하게 표현하지 못함
+        document.write(arr5);
+        document.write(...arr5);
+        document.write('<hr>')
+
+        // rest 연산자 -> ... 값들을 배열로 압축해서 표현
+        function testRest(...re) {
+            console.log(re);
+        }
+        testRest(1, 2, 3, 4, 5);
+
+        // 배열과 in 연산자 <--> of는 데이터의 값을 가져옴 (자바스크립트에만 있음)
+        const arr6 = ['11', '22', '33'];
+        for (let i in arr6) { // 인덱스 값이 반복문으로 돌아가는 형식 -> 자바에서는 인덱스 값이 아닌 데이터 값이 들어옴
+            document.write(`arr[${i}]=${arr6[i]} &nbsp;`);
+        }
+        document.write('<hr>')
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>함수</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<script>
+    // 함수 fucntion : 모듈화 (단위별로? 관리하기 위해)
+    // 아래와 같은 형태들로 함수가 이루어짐
+    // 매개변수 : 매개체가되는 변수
+
+    // c, java 함수
+    // 1. void 함수명() {실행문;}
+    // 2. void 함수명(매개변수) {실행문;}
+    // 3. 데이터타입 함수명() {실행문; return 값;}
+    // 4. 데이터타입 함수명(매개변수) {실행문; return 값;}
+
+    // [자바스크립트]  -> 데이터 타입이 존재하지 않음
+    // 1. fucntion 함수명() {실행문;}
+    // 2. fucntion 함수명(매개변수) {실행문;}
+    // 3. fucntion 함수명() {실행문; return 값;}
+    // 4. fucntion 함수명(매개변수) {실행문; return 값;}
+
+    // 함수의 정의 
+    function sum (n1,n2) {
+        document.write(`${n1}+${n2}=${n1+n2}`);
+    }
+
+    // 함수 호출(사용)
+    sum(10, 20); // 매개변수로 전달이 되어져서 값이 출력됨 -> sum 함수의 n1과 n2에 각각 10,20이라는 값이 전달되어서
+    // 따로 값을 지정해줬을 경우에 새로 지정된 값이 대입되서 값이 나옴 
+    let a = 100;
+    let b = 200;
+    sum(a, b);
+    sum(b, a);
+
+    function sum2(n1,n2) {
+        return n1 + n2;
+    }
+    let res = sum2(11,22);
+    document.write(`<h2>결과값1: ${res}</h2>`);
+    document.write(`<h2>결과값2: ${sum2(22,33)}</h2>`);
+
+    // rest 연산자 매개변수 (가변 매개변수)
+    function findMin(...items){
+        let output = items[0];
+        for (const i of items) {
+            if (output > i) {
+                output = i;
+            }
+        }
+        return output;
+    }
+    let res2 = findMin(10, 2, 6, 33, 55, 100);
+    document.write(`최소값:${res2}`);
+
+    // default 매개변수
+    function funcDefulat(name, money=10000,hour=40){
+        document.write(`<h2>${name} 급여정보</h2>`);
+        document.write(`<h2>시급 : ${money}</h2>`);
+        document.write(`<h2>근무시간 : ${hour}</h2>`);
+        document.write(`<h2>총급여 : ${hour*money}</h2>`);
+        document.write(`<hr>`)
+    }
+    funcDefulat('홍길동');
+    funcDefulat('전우치',1500);
+    funcDefulat('유관순',1500,100);
+
+    // 함수 연습
+    // 1. 숫자 2개와 사칙연산자(+, -, *, /)를 매개변수로 
+    //    입력 받아서 결과값을 반환하는 계산기.
+
+    function a(number1, number2, oper) {
+        if ( oper == '+') {
+            return number1 + number2;
+        }
+        else if (oper == '-') {
+            return number1 -number2;
+            
+        }
+        else if (oper == '/') {
+            return number1 / number2;
+           
+        }
+        else if (oper == '*') {
+            return number1 * number2;
+        
+        }
+    }
+        function pay(){
+        let number1 = Number(prompt("첫번째 숫자를 입력하세요", ">>숫자입력<<"));
+        let number2 = Number(prompt("두번째 숫자를 입력하세요", ">>숫자입력<<"));
+        let oper = prompt("사칙연산을 입력하세요");
+
+        let result = a(number1, number2, oper);
+        document.write(`<h2>결과 : ${result}</h2>`);
+        }
+
+    pay();
+
+    // 2. 1차원 배열 [10, 2, 3, 7, 33, 21, 90]을 매개변수로 전달하여 최소값, 최대값 출력
+
+    // 3. 국, 영, 수 점수를 입력받아 매개변수로 전달하여 총점, 평균 학점을 출력하는 함수
+    //  - 평균을 매개변수로 받아서 학점을 리턴하는 함수
+    function subject(){
+        let subject1 = Number(prompt("국어 점수를 입력하세요", ">>점수 입력<<"));
+        let subject2 = Number(prompt("영어 점수를 입력하세요", ">>점수 입력<<"));
+        let subject3 = Number(prompt("수학 점수를 입력하세요", ">>점수 입력<<"));
+    }
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

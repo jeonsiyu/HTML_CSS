@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>2차원 배열</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    // 이차원 배열 3x2 ,3행 2열, 3by2 
+    const arr = [[1,2],[3,4],[5,6]];
+
+    // 2x3
+    const arr2 = [[1,2,3],[4,5,6]];
+
+    // 3x4
+    const arr3 = [[1,2,3,4],[5,6,7,8],[9,10,11,12]];
+    for (let i = 0; i<3; i++) {
+        for(let j=0; j<4; j++) {
+            document.write(`${arr3[i][j]} &nbsp;`);
+        } 
+        document.write('<br>');
+    }
+    document.write('<hr>');
+    
+
+    // arr3.length: 2차원 배열에서 행의 길이
+    // arr3[0].length : 2차원 배열에서 1행의 열의 길이
+    // arr3[1].length : 2차원 배열에서 2행의 열의 길이
+    for (let i = 0; i<arr3.length; i++) {
+        for(let j=0; j<arr3[i].length; j++) {
+            document.write(`${arr3[i][j]} &nbsp;`);
+        } 
+        document.write('<br>');
+    }
+    document.write('<hr>');
+
+    const arr4 = [[1],[2,3],[4,5,6]];
+    for (let i = 0; i<arr4.length; i++) {
+        for(let j=0; j<arr4[i].length; j++) {
+            document.write(`${arr4[i][j]} &nbsp;`);
+        } 
+        document.write('<br>');
+    }
+    document.write('<hr>');
+
+    // 2차원 배열 출력해보기
+    // arr5 [0][0]=1 arr5[0][1]=2
+    // arr5 [1][0]=2 arr5[1][1]=4, arr[1][2]=6
+    // arr5 [2][0]=3 arr5[2][1]=6
+    // arr5 [3][0]=4 arr5[3][1]=8, arr[3][2]=10 arr[3][3]=12
+    // arr5 [4][0]=10 
+
+    const arr5 = [[1,2],[2,4,6],[3,6],[4,8,10,12],[10]];
+    for (let i = 0; i<arr5.length; i++) {
+        for(let j=0; j<arr5[i].length; j++) {
+            document.write(`${arr5[i][j]} &nbsp;`);
+        } 
+        document.write('<br>');
+    }
+    document.write('<hr>');
+
+
+    // 빈 2차원 배열 생성 3x2
+    let arr6 = new Array(3)    // 행
+    for (let i=0; i<arr.length; i++) {
+        arr6[i] = new Array(2); // 열
+    }
+
+    // 구구단의 결과를 2차원 배열에 저장한 후, 아래와 같이 출력하기.
+    /* 
+    2x1=2 3x1=3 4x1=4 .... 9x1=9
+    2x2=4 3x2=6 4x2=8 .... 9x2=18
+    ....
+    2x9=18 3x9=27 .... 9x9=81
+    */
+
+    // c, java처럼 [9][8] 표현이 불가능!!
+    let arr7 = new Array(9)    // 행
+    for (let i=0; i<arr.length; i++) {
+        arr7[i] = new Array(8); // 열
+    }
+
+    for(let i=0; i<arr7.length; i++) {
+        for(let j=0; j<arr7[i].length; j++){
+            arr7[i][j] = (i+1) *(j+2);
+            document.write(`${j+2}x${i+1}=${arr7[i][j]} &nbsp;`);
+        }
+        document.write('<br>');
+    }
+
+    for(let i=1; i<arr7.length+1; i++) {
+        for(let j=2; j<arr7[i].length+2; j++){
+            arr7[i-1][j-2] = (i+1) *(j+2);
+            document.write(`${j}x${i}=${arr7[i-1][j-2]} &nbsp;`);
+        }
+        document.write('<br>');
+    }
+
+    
+</script>
+</head>
+<body>
+    
+</body>
+</html>
