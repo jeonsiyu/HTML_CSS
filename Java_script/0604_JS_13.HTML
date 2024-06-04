@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        function buy(item, price, quant, callback) {
+            document.write(`<h2>${price}원 ${item}를 ${quant}개 골랐습니다.</h2>`);
+            setTimeout(() => {
+                document.write(`<h2>점원이 가격을 계산중입니다...</h2>`);
+                let total = price * quant;
+                callback(total);
+            }, 2000);
+        }
+        function pay(tot) {
+            document.write(`<h2>${tot}원을 결제했습니다.</h2>`);
+        }
+        buy('콜라', 2500, 3, pay);
+    </script>
+</head>
+<body>
+</body>
+</html>

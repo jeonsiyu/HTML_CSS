@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>객체</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    // 자바스크립트 객체(JSON) : {키:값}의 구조를 가짐
+    const person = {
+        name: '홍길동',
+        age: 200,
+        eat : function (food) {
+            document.write(`<h2>${food}먹는중...</h2>`);
+        }
+    }
+    document.write(`<h2>name: ${person.name}</h2>`);
+    document.write(`<h2>name: ${person.age}</h2>`);
+    person.eat('된장찌개');
+
+    const std = {};
+    std.이름 = '홍길동';
+    std.취미 = '잠자기';
+    std.특기 = '술마시기';
+    document.write(`<h2>${std.이름}</h2>`);
+    // json 객체를 문자열로 변환
+    document.write(`<h2>${JSON.stringify(std)}</h2>`);
+
+    // this: 객체 자기자신을 의미!
+    const test = {
+        num : 2,
+        a: function() {
+            document.write(`<h2>{this.num}</h2>`);
+        },
+        b: ()=> {document.write(`<h2>${this.num}</h2)`);
+        } 
+    }
+    test.a();
+    test.b();
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

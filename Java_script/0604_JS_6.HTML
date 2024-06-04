@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    // 동기식 프로그래밍
+    function work() {
+        const start =  Date.now();
+        for (let i =0; i<1000000000; i++);
+        const end = Date.now();
+        // 1초: 1s, 1/1000초: 1ms
+        document.write(`<h2>작업 완료 시간 :${end-start}ms</h2>`);
+    }
+    document.write(`<h2>작업을 시작합니다.</h2>`);
+    work();
+    document.write(`<h2>작업을 완료하였습니다.</h2>`);
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    // 1차원 배열 [10, 2, 3, 7, 33, 21, 90]을 
+    // 매개변수로 전달하여 최소값, 최대 값 출력하는 콜백함수
+    function findMinMax(arr, callback) {
+    if (arr.length === 0) {
+        callback('Array is empty', null, null);
+        return;
+    }
+
+    let min = arr[0];
+    let max = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+
+    callback(null, min, max);
+}
+
+// 결과를 출력하는 콜백 함수
+function printResult(error, min, max) {
+    if (error) {
+        console.log(error);
+    } else {
+        console.log('Min value:', min);
+        console.log('Max value:', max);
+    }
+}
+
+// 1차원 배열
+const array = [10, 2, 3, 7, 33, 21, 90];
+
+// 콜백 함수를 사용하여 최소값과 최대값 찾기
+findMinMax(array, printResult);
+    
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

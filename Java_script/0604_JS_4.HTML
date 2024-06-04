@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    function sayhello(name, callback) {
+        const words = `안녕하세요. 제 이름은 ${name}입니다.`;
+        callback(words);
+    }
+
+    sayhello('홍길동', function prinName(name){
+        document.write(`<h2>${name}</h2>`);
+    }); // 함수 호출
+    document.write('<hr>')
+
+    function sayhello2(name, callback) {
+        const words = `안녕하세요. 제 이름은 ${name}입니다.`;
+        callback(words);
+    }
+
+    sayhello2('김길동', function (name){  // 매개변수를 익명 함수로 사용한 것
+        document.write(`<h2>${name}</h2>`);
+    }); 
+    document.write('<hr>')
+
+
+    // 익명함수로 쓰인 것은 람다 함수로 바꿔서 사용 가능함
+    function sayhello3(name, callback) {
+        const words = `안녕하세요. 제 이름은 ${name}입니다.`;
+        callback(words);
+    }
+
+    sayhello3('전우치', (name) => {
+        document.write(`<h2>${name}</h2>`);
+    }); 
+    document.write('<hr>')
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

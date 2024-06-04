@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    function intro(lastName, firstName, callback) {
+        let fullName = lastName + firstName ;
+        callback(fullName);
+    }
+
+    function sayHello(name) {
+        document.write(`<h2>안녕하세요. ${name}입니다.</h2>`);
+    }
+
+    function sayBye(name) {
+        document.write(`<h2>안녕히가세요. ${name}입니다.</h2>`);
+    }
+    // 콜백함수 호출(사용)
+    intro('전','시유', sayHello);
+    intro('전','시유', sayBye);
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

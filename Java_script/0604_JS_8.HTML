@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        let count1 = 1;
+        let count2 = 11;
+        let id1 = setInterval(()=>{
+            document.write(`<h2>1초마다 실행! ${count1++}번째</h2>`);
+        }, 1000); // 1초 간격으로 동작
+
+        let id2 = setInterval(()=>{
+            document.write(`<h2>0.5초마다 실행! ${count2++}번째</h2>`);
+        }, 500);
+
+        setTimeout(() => {
+            document.write(`<h2>타이머 종료!</h2>`);
+            clearInterval(id1); // 타이머 종료
+            clearInterval(id2);
+        }, 5000);
+    </script>
+</head>
+<body>
+</body>
+</html>

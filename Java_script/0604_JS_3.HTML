@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>콜백함수</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+<script>
+    // 콜백 함수 : 비동기로 작성된 함수들의 동기화 처리
+    // 함수를 매개변수로 전달하는 함수를 말함 
+    function funcA(callback){ 
+        callback(); 
+    }
+
+    function funcB(){
+        document.write(`<h2>콜백함수!</h2>`);
+    }
+    funcA(funcB);
+
+    // 일반적인 함수 형태 사용
+    function add(a, b) {
+        return a+b;
+    }
+    function res(val) {
+        document.write(`<h2>${val}</h2>`);
+    }
+    let hap = add(10,20)
+    res(hap);
+
+    // 콜백 함수로 사용
+    function add2(a, b, callback) {  // callback이라는 이름 자체가 의미가 있는게 아니고 매개변수임
+        let sum = a + b;
+        callback(sum);
+    }
+    function res2(val) {
+        document.write(`<h2>콜백함수:${val}</h2>`);
+    }
+    add2(10,20, res2);
+</script>
+</head>
+<body>
+    
+</body>
+</html>
