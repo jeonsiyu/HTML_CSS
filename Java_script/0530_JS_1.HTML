@@ -26,12 +26,14 @@
         let f1 = 10.2       // 실수
         let bool = true     // boolean
         console.log('문자열:' +str);
+        // 템플릿 문자열
+        // 백티(`)을 사용해 문자열 내부에 '${}'기호를 사용하여 표현식을 넣으면 표현식이 문자열 안에서 계산됨
         console.log(`실수 : ${f1}`); // 백티 (~밑에 있는 특수문자)
 
         //입력처리
         const input = prompt('이름을 입력하세요');
-        document.write('<h1>' + input +'</h1>'); // ''을 사용해서 입력
-        document.write(`<h1> ${input}</h1>`); // ``을 사용해서 입력
+        document.write('<h1>' + input +'</h1>'); // ''을 사용해서 입력 -> 문자열 연결 연산자(+)를 사용한 경우
+        document.write(`<h1> ${input}</h1>`); // ``을 사용해서 입력 -> 백티(`)를 사용한 경우
 
         const num1 = prompt ('1.숫자를 입력하세요');
         document.write(`<h1>문자열 결합${num1 + 100}</h1>`); // 입력받은 값은 기본적으로 문자열로 인식함 --> 숫자로 바꿔줘야함
