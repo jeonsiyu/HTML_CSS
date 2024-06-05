@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=> {
+            let count = 0;
+            const h1 = document.querySelector('h1');
+            h1.addEventListener('click', (event) => {
+                count++;
+                h1.textContent = `click count: ${count}`;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>클릭 횟수: 0</h1>
+</body>
+</html>

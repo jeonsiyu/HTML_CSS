@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=> {
+            // 문서 객체 생성 (h1 태그 생성)
+            const header = document.createElement('h1');
+
+            // 생성한 태그 속성 추가
+            header.textContent = '문서 객체 동적으로 생성';
+            header.setAttribute('data-custom', '사용자 정의 속성');
+            header.style.color = 'white';
+            header.style.backgroundColor = 'blue';
+            
+            // h1 태그를 body 아래 추가
+            document.body.appendChild(header);
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

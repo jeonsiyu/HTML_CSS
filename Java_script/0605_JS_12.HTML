@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=> {
+            let count = 0;
+            let isConnect = false;
+            const h1 = document.querySelector('h1');
+            const p = document.querySelector('p');
+            const connectBtn = document.querySelector('#connect');
+            const disConnectBtn = document.querySelector('#disconnect');
+
+            const listner = (event) => {
+                h1.textContent = `클릭 횟수: ${count++}`;
+            }
+
+            connectBtn.addEventListener("click", () => {
+                if (isConnect === false) {
+                    console.log('이벤트 연결');
+                    h1.addEventListener("click", listner);
+                    p.textContent = `이벤트 연결 상태: 연결`;
+                    isConnect = true;
+                }
+            });
+
+            disconnect.addEventListener("click", () => {
+                if (isConnect === true) {
+                    console.log('이벤트 해제');
+                    h1.removeEventListener("click", listner);
+                    p.textContent = `이벤트 연결 상태: 해제`;
+                    isConnect = false;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>클릭 횟수: 0</h1>
+    <button id="connect">이벤트 연결</button>
+    <button id="disconnect">이벤트 해제</button>
+    <p>이벤트 연결 상태: 해제</p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=> {
+            // 모든 h1 태그 선택
+            const header = document.querySelectorAll('h1');
+            header.forEach((item) => {
+                item.textContent = '헤더';
+                item.style.color = 'white';
+                item.style.backgroundColor = 'black';
+                item.style.padding = '10px';
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>1</h1>
+    <h1>2</h1>
+    <h1>3</h1>
+</body>
+</html>
