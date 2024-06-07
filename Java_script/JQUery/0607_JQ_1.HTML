@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" 
+        crossorigin="anonymous"></script>
+    
+    <script>
+        // 웹페이지가 로딩이 완료
+        $().ready(function() {
+            $('#b1').on("click", function() {
+                $("#d1").css("border", "2px solid orange");
+                $("h1").text('홍길동');
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            // const b2 = document.querySelector("#b2");
+            // const d2 = document.querySelector("#d2");
+            // const h1 = document.querySelector("h1");
+            document.querySelector("#b2").addEventListener("click", ()=> {
+                document.querySelector("#d2").style.border = "1px solid blue";
+                document.querySelector("h1").textContent = "전우치";
+            });
+        });        
+    </script>
+</head>
+
+<body>
+    <button id="b1" class="btn">버튼 1</button>
+    <button id="b2" class="btn">버튼 2</button>
+    <div id="d1">안녕하세요</div>
+    <div id="d2">반갑습니다</div>
+    <h1></h1>
+</body>
+</html>

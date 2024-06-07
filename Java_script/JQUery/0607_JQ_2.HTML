@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+    <script>
+        // 웹페이지가 로딩이 완료
+        $().ready(function () {
+            $("img").each(function(index, element) {
+                $(this).attr("src", `http://placehold.it/${(index+1)*100}x100`);
+            });
+        });
+    </script>
+</head>
+<body>
+    <img />
+    <img />
+    <img />
+    <img />
+</body>
+</html>
