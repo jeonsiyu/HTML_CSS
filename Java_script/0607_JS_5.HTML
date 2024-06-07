@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src="http://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="container"></div>
+    <button onclick="getData();">데이터 가져오기</button>
+    <script>
+        const container = document.querySelector('#container');
+        let page = 1;
+        function getData() {
+            let url = `https://picsum.photos/v2/list?page=${page++}&limit=14`;
+            axios.get(url).then(function(res) {
+                console.log(res);
+                if (res.status === 200) {
+                    res.data.forEach(function(item) {
+                        makeItem(item);
+                    });
+                }
+            });
+        }
+        function makeItem(item) {
+            let modUrl = `https://picsum.photos/id/${item.id}/300`;
+            let img = document.createElement('img');
+            img.src = modUrl;
+            container.appendChild(img);
+        }
+    </script>
+</body>
+</html>
